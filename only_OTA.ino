@@ -15,7 +15,7 @@ const char* version_url = "https://raw.githubusercontent.com/Vineeth-D-1999/CCMS
 const char* firmware_url = "https://raw.githubusercontent.com/Vineeth-D-1999/CCMS-OTA-Test/master/only_OTA.ino.bin";
 
 // Current firmware version
-const String currentVersion = "1.2";
+const String currentVersion = "1.3";
 
 void setup() {
   Serial.begin(115200);
@@ -23,7 +23,6 @@ void setup() {
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
     Serial.println("Connecting to WiFi...");
-    Serial.println("Connecting...");
   };
   if (checkForUpdate()) {
     performOTA();
